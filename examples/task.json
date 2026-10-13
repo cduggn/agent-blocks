@@ -1,0 +1,29 @@
+{
+  "id": "framework-pilot",
+  "sources": [
+    "AGENTS.md",
+    "README.md",
+    "skills/task-worker/SKILL.md",
+    "skills/task-worker/references/verifiers.md",
+    "skills/task-worker/assets/task-template.md",
+    "skills/task-worker/scripts/verify.py",
+    "examples/check_links.py",
+    "tests/test_verify.py"
+  ],
+  "acceptance": [
+    {
+      "id": "A1",
+      "outcome": "Readers can follow the framework's relative file links",
+      "verifiers": [
+        "relative-doc-links"
+      ]
+    },
+    {
+      "id": "A2",
+      "outcome": "The verifier CLI accepts demonstrated success and rejects missing or failed proof",
+      "verifiers": [
+        "verifier-behavior"
+      ]
+    }
+  ]
+}

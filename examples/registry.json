@@ -1,0 +1,25 @@
+{
+  "verifiers": [
+    {
+      "id": "relative-doc-links",
+      "scope": "shared",
+      "claim": "Relative file links in the framework documentation resolve",
+      "command": [
+        "python3",
+        "examples/check_links.py",
+        "."
+      ],
+      "timeout_seconds": 10
+    },
+    {
+      "id": "verifier-behavior",
+      "scope": "project",
+      "claim": "The verifier CLI rejects missing, failed, timed out and changed-input proof",
+      "command": [
+        "python3",
+        "tests/test_verify.py"
+      ],
+      "timeout_seconds": 30
+    }
+  ]
+}
